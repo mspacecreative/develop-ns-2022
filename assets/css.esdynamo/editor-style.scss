@@ -1,0 +1,62 @@
+@import "_combine.scss";
+
+body {
+	font-family: 'Libre Franklin', sans-serif;
+}
+#tinymce.mce-content-body {
+	margin: 15px;
+}
+h1, h2 {
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 300;
+	font-size: 40px;
+	line-height: 1em;
+}
+blockquote {
+	padding-left: 4em;
+	margin-right: 0;
+	margin-bottom: 2em;
+    position: relative;
+	color: #666;
+	font-family: 'Libre Franklin', sans-serif;
+}
+blockquote p {
+	font-size: 24px;
+	font-weight: 666;
+	font-style: italic;
+}
+blockquote::before {
+	content: "\f10d";
+	content: "\201C";
+	position: absolute;
+	left: 0;
+	top: -28px;
+	font-size: 100px;
+}
+.blockQuoteAuthor {
+	font-size: 19px;
+	line-height: 1.5em;
+    display: block;
+}
+.components-resizable-box__container {
+	width: 100%!important;
+	height: auto!important;
+}
+.editor-styles-wrapper .flex-gallery {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+.editor-styles-wrapper .flex-gallery li {
+	margin: 4em 0;
+}
+@media (min-width: 1440px) {
+	.interface-interface-skeleton__sidebar .interface-complementary-area {
+	    width: 600px!important;
+	}
+}
+@media (min-width: 782px) {
+	.interface-interface-skeleton__sidebar .interface-complementary-area {
+	    width: 300px!important;
+	}
+}

@@ -1,0 +1,55 @@
+// COLOURS
+$brandNavy: #012a3c;
+$brandBlue: #008fb7;
+$brandOrange: #f36f00;
+
+// CHECKER BOARD
+@import "_checker-board.scss";
+
+// FONTS
+@import "_fonts.scss";
+
+// HERO
+@import "_hero.scss";
+
+// BUTTONS
+@import "_buttons.scss";
+
+// SPACING
+@import "_spacing.scss";
+
+// OVERLAYS
+@import "_overlays.scss";
+
+// NORMALIZE
+@import "_normalize.min.scss";
+
+// TYPOGRAPHY
+@import "_typography.scss";
+
+// IMAGES
+@import "_images.scss";
+
+// FLEXBOX GRID
+@import "_flexboxgrid.min.scss";
+
+// PROMO OVERLAY
+@import "_promo-overlay.scss";
+
+// BASE STYLING
+@import "_style-base.scss";
+
+// HAMBURGER
+@import "_hamburgers.scss";
+
+// NAVIGATION
+@import "_nav.scss";
+
+// SLICK STYLING
+@import "_slick.scss";
+
+// HOME STYLING
+@import "_home.scss";
+
+// MEDIA QUERIES
+@import "_media-queries.scss";

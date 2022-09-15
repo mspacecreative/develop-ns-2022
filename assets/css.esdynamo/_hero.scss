@@ -1,0 +1,147 @@
+.hero {
+	//background-image: url(../img/placeholders/peggys-cove-comp.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: top center;
+	//height: calc(100vh - 105px);
+	position: relative;
+	overflow: hidden;
+	//padding-top: 105px;
+}
+.hero .innerContainer {
+	position: relative;
+	display: flex;
+	align-items: center;
+	height: 100%;
+	padding: 5em 0;
+	max-width: 1440px;
+}
+body .hero .innerContainer::before {
+	left: 4.5em;
+}
+.heroContentBox {
+	//background-color: $brandNavy;
+	max-width: 65vw;
+	//padding: 80px 130px;
+	position: relative;
+	background-color: $brandNavy;
+    padding: 4em 4em 4em 9em;
+	//left: -65px;
+	//background-image: url(../img/textures/herobox-sketch.svg);
+    //background-repeat: no-repeat;
+    //background-position: left -245px bottom -110px;
+    //background-size: 130%;
+}
+.heroContentBox h1 {
+	@extend %franklinGothicBold;
+	color: #fff;
+	font-size: 55px;
+	text-transform: uppercase;
+	line-height: 1.35em;
+	margin-bottom: 0;
+}
+
+.slick-slide img {
+    width: 100%;
+}
+
+// SOCIAL MEDIA BUTTONS
+.home.page .socialMedia {
+	position: fixed;
+	background-color: $brandNavy;
+	right: 0;
+	padding: 10px;
+	top: 50%;
+	margin-top: 52.5px;
+	transform: translateY(-50%);
+	z-index: 999;
+}
+.page .socialMedia {
+	position: fixed;
+	background-color: $brandNavy;
+	right: 0;
+	padding: 10px;
+	top: 187px;
+	margin-top: 105px;
+	transform: translateY(-50%);
+	z-index: 999;
+}
+// SOCIAL MEDIA INLINE
+.home.page .socialMedia.inline, .page .socialMedia.inline {
+	position: relative;
+	background-color: transparent;
+	right: auto;
+	top: auto;
+	margin-top: 0;
+	transform: none;
+	padding: 0;
+}
+.socialMedia ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.socialMedia.inline ul {
+	font-size: 0;
+	display: flex;
+	align-items: center;
+}
+.socialMedia ul li {
+	background-color: #fff;
+	border-radius: 100%;
+	border: 1px solid #fff;
+	height: 30px;
+	width: 30px;
+	margin: 15px;
+	display: flex;
+    align-items: center;
+	justify-content: center;
+	transition: 0.25s ease-in-out;
+}
+.socialMedia ul li:hover {
+	background-color: transparent;
+	transition: 0.25s ease-in-out;
+}
+.socialMedia.inline ul li {
+	background-color: $brandNavy;
+	margin: 0 15px 0 0;
+}
+.socialMedia ul li a {
+	color: $brandNavy;
+	display: block;
+	line-height: 30px;
+	text-align: center;
+	display: flex;
+    align-items: center;
+	font-size: 18px;
+}
+.socialMedia.inline ul li a, .socialMedia ul li:hover > a {
+	color: #fff;
+	transition: 0.25s ease-in-out;
+}
+body .fa,body .far,body .fas {
+	font-family: fontAwesome;
+}
+.carouselContainer {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+// PHOTO CAPTIONS
+.hero-caption {
+	//position: absolute;
+    //bottom: 2em;
+    //right: 3em;
+    //padding: 1em 1.25em;
+	padding: 1em 0;
+    //background-color: rgba(0,0,0,.5);
+    //color: #fff;
+	color: #000;
+    line-height: 1.25em;
+    font-size: 13px;
+    //border-radius: 3px;
+	text-align: right;
+}

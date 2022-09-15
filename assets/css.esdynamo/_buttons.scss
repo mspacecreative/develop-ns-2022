@@ -1,0 +1,102 @@
+.button {
+	text-transform: uppercase;
+	color: #fff;
+	padding: 10px 40px;
+	display: inline-block;
+	margin-top: 35px;
+	background-color: $brandBlue;
+	border: 1px solid $brandBlue;
+	transition: 0.25s ease-in-out;
+}
+.button.light {
+	background-color: #fff;
+	border: 1px solid #fff;
+	color: #fff;
+	transition: 0.25s ease-in-out;
+}
+.innerContainer a.dark {
+	color: #fff;
+}
+.innerContainer .button:hover {
+	transition: 0.25s ease-in-out;
+	background-color: transparent;
+	color: $brandBlue;
+}
+.button.navy_bg {
+	background-color: $brandNavy;
+	border-color: $brandNavy;
+}
+.button.orange_bg {
+	background-color: $brandOrange;
+	border-color: $brandOrange;
+}
+.button.blue_bg {
+	background-color: $brandBlue;
+	border-color: $brandBlue;
+}
+.orange_bg .button.light {
+	color: $brandOrange;
+}
+.blue_bg .button.light {
+	color: $brandBlue;
+}
+.navy_bg .button.light {
+	color: $brandNavy;
+}
+
+.navy_bg .button.light:hover, .orange_bg .button.light:hover, .blue_bg .button.light:hover {
+	background-color: transparent;
+	color: #fff;
+	transition: 0.25s ease-in-out;
+}
+.modal .button {
+	font-size: 13px;
+    padding: 0.5em 1em;
+	display: inline-block;
+	margin-top: -15px;
+	right: 80px;
+	top: 50%;
+	text-decoration: none;
+	position: absolute;
+	background-color: transparent;
+	border: 1px solid #fff;
+}
+.light {
+	/*border: 1px solid #fff;*/
+	color: #fff;
+}
+.externalLink::after {
+	content: '\f08e';
+	font-family: fontAwesome;
+	margin-left: 5px;
+}
+.nextSection a:hover, .ctaContainer a:hover, .nextSection a, .ctaContainer a {
+	transition: 0.25s ease-in-out;
+}
+.nextSection a:hover {
+	background-color: rgba(90, 150, 175, .75);
+}
+.ctaContainer a:hover {
+	color: rgba(90, 150, 175, .75);
+	transition: 0.25s ease-in-out;
+}
+// REMOVE OUTLINE WHEN USING MOUSE
+body.using-mouse :focus {
+	outline: none!important;
+}
+
+// INLINE BLUE LINK WITH ARROW
+.inline-link-with-arrow a {
+	position: relative;
+	padding-right: 25px;
+	display: inline-block;
+}
+.inline-link-with-arrow .downArrowContainer {
+	transform: rotate(-90deg);
+    top: 4px;
+}
+.inline-link-with-arrow .downArrow,
+.inline-link-with-arrow .downArrow:after,
+.inline-link-with-arrow .downArrow:before {
+	background-color: $brandBlue;
+}

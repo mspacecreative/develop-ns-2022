@@ -1,0 +1,41 @@
+.editor-styles-wrapper .wp-block blockquote {
+	padding-left: 4em;
+	margin-right: 0;
+	margin-bottom: 2em;
+    position: relative;
+	color: #666;
+	font-family: 'Libre Franklin', sans-serif!important;
+}
+
+.wp-block {
+	width: 100% !important;
+	max-width: none !important;
+	padding: 0 1em!important;
+}
+.editor-styles-wrapper .editor-writing-flow {
+	margin: 0 !important;
+	max-width: none !important;
+}
+.editor-styles-wrapper .dark, .acf-icon.dark {
+	color: #fff!important;
+}
+.editor-styles-wrapper {
+	padding: 10px 4em!important;
+}
+.components-resizable-box__container.has-show-handle {
+	width: 100%!important;
+}
+@media (min-width: 782px) {
+	.interface-interface-skeleton__sidebar .interface-complementary-area {
+	    width: 500px!important;
+	}
+}
+@media (min-width: 1920px) {
+	.block-editor-page .interface-interface-skeleton__content {
+		max-width: 70%!important;
+	}
+	.block-editor-page .interface-interface-skeleton__sidebar {
+		max-width: 30%!important;
+		width: 100%!important;
+	}
+}
