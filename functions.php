@@ -384,5 +384,4 @@ include 'functions/gutenberg.php';
 include 'functions/tinymce.php';
 include 'functions/shortcodes.php';
 include 'functions/modal.php';
-include 'functions/routing.php';
 include 'functions/remove-wp.php';
