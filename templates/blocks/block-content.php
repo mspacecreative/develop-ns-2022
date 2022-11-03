@@ -2,7 +2,6 @@
 $bgimg = get_field('background_image');
 $bgcolor = get_field('background_color');
 $bgimgoverlay = get_field('background_image_overlay');
-$width = get_field('content_width');
 $dasheddivider = get_field('dashed_divider');
 
 // CUSTOM ID
@@ -36,10 +35,12 @@ switch ($bgcolor) {
 		break;
 	default:
 		$bgtint = '';
-} ?>
+}
+
+include 'includes/row-width.php'; ?>
 	
 <section<?php if ( $id ): echo ' id="'; echo $id; echo '"'; endif; ?> class="content-section<?php if ($dasheddivider): echo ' dashed-divider'; endif; if ( $className ): echo esc_attr($className); endif; if ($bgimgoverlay): echo $bgimgoverlay; endif; if ($bgtint): echo $bgtint; endif; if ($bgimg): echo ' bg-img-cover'; endif; ?>"<?php if ($bgimg): echo ' style="background-image: url('; echo $bgimg; echo ');"'; endif; ?>>
-	<div class="bullet-points innerContainer<?php if ($width): echo ' maxWidth850'; endif; ?>">
+	<div class="bullet-points innerContainer<?php echo $rowwidth ?>">
 		<?php include('includes/section-content-loop.php'); ?>
 	</div>
 </section>

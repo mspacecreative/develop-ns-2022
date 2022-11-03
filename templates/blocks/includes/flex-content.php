@@ -45,7 +45,7 @@ while ( have_rows('flexible_content') ): the_row();
 			<?php foreach ( $flexgallery as $fleximage ):
 			$caption = $fleximage['caption']; ?>
 			<li<?php if ($animate): echo ' data-aos="fade-'; if ($animatedirection): echo $animatedirection; endif; echo'"'; endif; ?>>
-				<img src="<?php echo $fleximage['sizes']['large']; ?>" alt="<?php echo $fleximage['alt']; ?>" />
+				<img src="<?php echo $fleximage['sizes']['xlarge']; ?>" alt="<?php echo $fleximage['alt']; ?>" />
 				<?php if ($caption): ?>
 				<p class="img-caption<?php if ($captionalignment): echo $captionalignment; endif; ?>"><?php echo $caption ?></p>
 				<?php endif; ?>
@@ -84,6 +84,7 @@ while ( have_rows('flexible_content') ): the_row();
 						
 	<?php elseif ( get_row_layout() == 'post_content' ):
 	$video = get_sub_field('video');
+	$article = get_sub_field('article');
 	$animate = get_sub_field('animate');
 	$animatedirection = get_sub_field('animation_direction');
 	//$issuu = get_sub_field('issuu');
@@ -107,6 +108,37 @@ while ( have_rows('flexible_content') ): the_row();
 					<?php endif; ?>
 				</a>
 			</div>
+		<?php
+
+		elseif ($article):
+			setup_postdata($article);
+			foreach ($article as $item) :
+				// VARIABLES
+				$externalurl = get_field('article_url', $item->ID) ? '<a class="button navy_bg" href="' . get_field('article_url', $item->ID) . '" target="_blank" style="margin-top: 20px;">' . __('Read more') . '</a>' : '';
+				$date = get_the_date('F j, Y', $item->ID);
+				$title = get_the_title($item->ID);
+				$terms = get_the_terms($item->ID, 'company'); ?>
+								
+				<div<?php if ($animate): echo ' data-aos="fade-'; if ($animatedirection): echo $animatedirection; endif; echo'"'; endif; ?> class="row article-container">
+					<div class="col col-lg-2 col-md-2 col-sm-2 col-xs-2" style="flex-basis: auto; max-width: 100%;">
+						<img src="<?php echo get_template_directory_uri() . '/assets/img/icons/article-icon.svg'; ?>" style="margin-top: 5px;">
+					</div>
+					<div class="col col-lg-10 col-md-10 col-sm-10 col-xs-10">
+						<h4>
+							<?php echo $title . __(' ...'); ?>
+						</h4>
+						<div class="article-meta-data">
+						<?php
+						foreach ($terms as $term) {
+							echo 
+							'<span class="small-text">' . $term->name . '</span>';
+						}
+						echo ' | ' . $date; ?>
+						</div>
+						<?php echo $externalurl ?>
+					</div>
+				</div>
+			<?php endforeach; ?>
 		<?php 
 		endif;
 					

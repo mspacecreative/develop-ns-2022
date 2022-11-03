@@ -16,19 +16,7 @@
 	<div class="carouselContainer">
 		<div class="carousel">
 			<div>
-				<img src="<?php echo get_template_directory_uri() ?>/assets/img/hero/hero-1.jpg);">
-			</div>
-			<div>
-				<img src="<?php echo get_template_directory_uri() ?>/assets/img/hero/hero-2.jpg);">
-			</div>
-			<div>
-				<img src="<?php echo get_template_directory_uri() ?>/assets/img/hero/hero-3.jpg);">
-			</div>
-			<div>
-				<img src="<?php echo get_template_directory_uri() ?>/assets/img/hero/hero-4.jpg);">
-			</div>
-			<div>
-				<img src="<?php echo get_template_directory_uri() ?>/assets/img/hero/hero-5.jpg);">
+				<img src="<?php echo get_home_url(); ?>/wp-content/themes/develop-ns-2022/assets/img/hero/Peggys-Cove-new-decking-homepage.jpg">
 			</div>
 		</div>
 	</div>
@@ -36,8 +24,8 @@
 	
 </div>
 
-<section>
+<!--<section>
 	<div class="innerContainer">
 		<p class="hero-caption"><?php echo __('Lunenburg Doc Fest 2021, photo credit Nancy MacDonald'); ?></p>
 	</div>
-</section>
+</section>-->

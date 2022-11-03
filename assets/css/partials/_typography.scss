@@ -1,0 +1,189 @@
+// LIBRE FRANKLIN BOLD
+%franklinGothicBold {
+  //font-family: franklin-gothic-atf, sans-serif;
+  font-family: "Libre Franklin", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+// LIBRE FRANKLIN REG
+%franklinGothicReg {
+  font-family: "Libre Franklin", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+%franklinGothicLight {
+  font-family: libre-franklin, sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+// SOURCE SANS PRO
+%sourceSansPro {
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-style: normal;
+  font-weight: normal;
+}
+h1:first-of-type,
+h2:first-of-type,
+h3:first-of-type,
+h4:first-of-type,
+h5:first-of-type,
+h6:first-of-type {
+  margin-top: 0;
+}
+h1 {
+  font-size: 50px;
+  line-height: 1.15em;
+  font-weight: 300;
+  margin-bottom: 25px;
+}
+.noMarginBottom > * {
+  margin-bottom: 0;
+}
+h2 {
+  font-size: 42px;
+  line-height: 1.15em;
+  font-family: libre-franklin, sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  margin-bottom: 20px;
+}
+.menuContents .nav a,
+h2,
+h1 {
+  @extend %franklinGothicLight;
+}
+h3 {
+  font-size: 25px;
+  font-weight: bold;
+}
+h4 {
+  font-size: 20px;
+  @extend %franklinGothicLight;
+  font-weight: bold;
+  margin: 0 0 15px;
+}
+p {
+  @extend %franklinGothicReg;
+  line-height: 1.5em;
+  font-size: 17px;
+  margin-bottom: 15px;
+  margin-top: 0;
+}
+p:last-of-type {
+  margin-bottom: 0;
+}
+.text-align-center {
+  text-align: center;
+}
+.text-align-right {
+  text-align: right;
+}
+.innerContainer a {
+  color: $brandBlue;
+  transition: 0.25s ease-in-out;
+}
+.innerContainer a:hover {
+  transition: 0.25s ease-in-out;
+}
+
+// BLOCKQUOTE
+blockquote {
+  padding-left: 4em;
+  margin-left: -4em;
+  margin-right: 0;
+  margin-bottom: 0;
+  position: relative;
+  color: #666;
+  @extend %franklinGothicBold;
+  letter-spacing: -0.02em;
+}
+.blockQuoteAuthor {
+  font-size: 19px;
+  line-height: 1.5em;
+  display: block;
+}
+blockquote::before {
+  content: "\f10d";
+  content: "\201C";
+  position: absolute;
+  left: 0;
+  top: -15px;
+  font-size: 100px;
+}
+blockquote p {
+  font-size: 22px;
+  font-style: italic;
+  font-weight: 600;
+}
+
+// ARTICLE LINKS
+.article-links {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.article-links h3 {
+  color: #000;
+}
+.article-links li {
+  margin-bottom: 5px;
+}
+.article-links li:last-of-type {
+  margin-bottom: 0;
+}
+.article-links a {
+  //position: relative;
+  //padding-right: 30px;
+  display: inline-block;
+}
+.article-links .downArrowContainer {
+  transform: rotate(-135deg);
+  position: absolute;
+  top: 0;
+  width: 40px;
+  height: 40px;
+  right: calc(100% + 15px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.article-links .downArrow {
+  width: 6px;
+  height: 35px;
+}
+.article-links .downArrow::before,
+.article-links .downArrow::after {
+  width: 6px;
+  height: 25px;
+}
+.article-links ~ .button {
+  margin-top: 25px;
+}
+.blue-arrow .downArrow,
+.blue-arrow .downArrow:before,
+.blue-arrow .downArrow:after {
+  background-color: $brandBlue;
+}
+.navy-arrow .downArrow,
+.navy-arrow .downArrow:before,
+.navy-arrow .downArrow:after {
+  background-color: $brandNavy;
+}
+.orange-arrow .downArrow,
+.orange-arrow .downArrow:before,
+.orange-arrow .downArrow:after {
+  background-color: $brandOrange;
+}

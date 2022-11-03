@@ -1,0 +1,299 @@
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.photoZoom a,
+.videoOverlay a {
+  position: relative;
+  display: block;
+}
+.photoZoom a::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.75);
+  content: "";
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.5s ease-in-out;
+}
+.photoZoom a:hover::before {
+  opacity: 1;
+  visibility: visible;
+  transition: 0.5s ease-in-out;
+}
+
+// VIDEO PLAY ICON
+.videoOverlay a::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 84px;
+  height: 84px;
+  margin-left: -42px;
+  margin-top: -42px;
+  background-image: url(../img/icons/video-play-icon.svg);
+  background-size: 100%;
+  background-position: center;
+  content: "";
+}
+
+.issuuOverlay a::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 84px;
+  height: 84px;
+  margin-left: -42px;
+  margin-top: -42px;
+  background-image: url(../img/icons/issuu-book-icon-grey.svg);
+  background-size: 100%;
+  background-position: center;
+  content: "";
+  transition: 0.25s ease-in-out;
+}
+
+.issuuOverlay:hover a::after {
+  background-image: url(../img/icons/issuu-book-icon.svg);
+  transition: 0.25s ease-in-out;
+}
+
+#working-with-community .bullet-points > p:first-of-type {
+  margin-top: 0;
+}
+
+// CEO AND CHAIR PORTRAITS
+#ceo-message .photoGrid li img {
+  max-width: 250px;
+}
+
+// PHOTO GRID
+.photoGrid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.photoGrid li {
+  margin-bottom: 25px;
+}
+.photoGrid li:last-of-type {
+  margin-bottom: 0;
+}
+.photoGrid img {
+  width: 100%;
+}
+
+.wp-block-image.is-resized {
+  width: 100%;
+}
+
+figure.wp-block-image {
+  margin-bottom: 0;
+}
+
+.wp-block-image .size-full,
+.wp-block-image .size-full img,
+.wp-block-image img {
+  width: 100%;
+}
+
+.wp-block-image.size-full img {
+  width: 100%;
+}
+
+.ghostVertStitchContainer {
+  width: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  height: 100%;
+  padding: 0 4em;
+  max-width: calc(1280px - 8em);
+  pointer-events: none;
+}
+
+// OBJECT FIT IMAGES
+.absolute_img,
+.absoluteImgContainer img {
+  max-width: none;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.videoOverlay {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.bg-img-cover {
+  background-size: cover;
+  background-position: bottom center;
+}
+
+.absolutePositionedImg {
+  position: relative;
+}
+
+.innerContainer.absoluteCaptionInnerContainer {
+  position: absolute;
+  top: -40px;
+  width: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.topLeftCaption {
+  position: relative;
+}
+
+.absolutePositionedImg img {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% + 2px);
+}
+
+.pageHeaderBgGrid {
+  overflow: hidden;
+}
+
+figure {
+  margin-top: 25px;
+  margin-bottom: 25px;
+  width: 100%;
+}
+
+figcaption {
+  margin-top: 10px;
+}
+
+.aligncenter {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.full-width {
+  margin-top: 1em;
+}
+
+.flex-gallery {
+  list-style: none;
+  padding: 0;
+  margin: 1em 0 0;
+}
+.home .flex-gallery {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.flex-gallery li {
+  margin: 0 0 2em;
+}
+.flex-gallery li:last-of-type {
+  margin-bottom: 0;
+}
+/*
+.flex-gallery img {
+	width: 100%;
+}
+*/
+.flex-gallery li::before {
+  display: none;
+}
+.flexbox-layout {
+  display: flex;
+  margin-right: -0.5em;
+  margin-left: -0.5em;
+  flex-wrap: wrap;
+}
+.flexbox-layout > li {
+  flex-basis: 50%;
+  flex-grow: 1;
+  max-width: 100%;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+}
+
+.authentic-destinations .wrapper {
+  background-image: url(../img/overlays/DNS_AR_2022_Home_BG.jpg);
+  background-size: 100%;
+  background-position: bottom center;
+  background-repeat: no-repeat;
+}
+
+.wrapper {
+  position: relative;
+}
+
+.authentic-destinations .wrapper::before,
+.home .wrapper::before {
+  background-image: url(../img/overlays/DNS_AR_2022_Home_BG_top.jpg);
+  background-size: 100%;
+  background-position: top -104px center;
+  background-repeat: no-repeat;
+  left: 0;
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+.thriving-communities .wrapper,
+.working-waterfronts .wrapper {
+  background-image: url(../img/overlays/DNS_AR_2022_Home_BG_flopped_horizontally.jpg);
+  background-size: 100%;
+  background-position: top center;
+  background-repeat: repeat;
+}
+
+.home .wrapper::before {
+  background-position: top -1250px center;
+}
+
+.destination--development .flexbox-layout {
+  align-items: center;
+}
+.img-align-center,
+.img-align-center > li > img {
+  margin-right: auto;
+  margin-left: auto;
+}
+.img-align-right {
+  margin-left: auto;
+}
+.video-section img {
+  width: 100%;
+}
+
+// ICONS
+.ne-arrow-fill {
+  fill: $brandNavy;
+}
+
+// CAPTION STYLES
+.img-caption {
+  font-size: 13px;
+  margin-top: 10px;
+}
+
+// VIDEO PLACEHOLDER
+.video-placeholder-container {
+  height: auto;
+  padding-bottom: 42.5%;
+  position: relative;
+}
+.video-placeholder {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #999;
+  text-align: center;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}

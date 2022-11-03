@@ -16,12 +16,48 @@ $pagetitle = get_the_title($loop->ID);
 $featuredimg = get_field('home_page_featured_image', $loop->ID);
 $featuredimgsize = 'anamorphic';
 $themecolour = get_field('theme_colour', $loop->ID);
-$excerpt = get_the_excerpt($loop->ID);
+$excerpt = get_the_excerpt($loop->ID) . __('...');
 $icon = get_field('icon', $loop->ID);
 $mainheading = get_field('main_heading', $loop->ID);
 $subheading = get_field('sub_heading', $loop->ID);
 $featvideo = get_field('featured_video', $loop->ID);
+$featimgpositioning = get_field('featured_image_positioning', $loop->ID);
+$tapeoverlay = get_field('tape_overlay', $loop->ID);
+$tapeoverlaypositioning = get_field('tape_overlay_positioning', $loop->ID);
 $size = 'icon';
+
+switch ($tapeoverlaypositioning) {
+	case 'top-left':
+		$tapeoverlaypositioning = ' tape-overlay-left tape-overlay-left__top';
+		break;
+	case 'top-right':
+		$tapeoverlaypositioning = ' tape-overlay-right tape-overlay-right__top';
+		break;
+	case 'bottom-left':
+		$tapeoverlaypositioning = ' tape-overlay-left tape-overlay-left__bottom';
+		break;
+	case 'bottom-right':
+		$tapeoverlaypositioning = ' tape-overlay-right tape-overlay-right__bottom';
+		break;
+	default:
+		$tapeoverlaypositioning = '';
+		break;
+}
+
+switch ($featimgpositioning) {
+	case 'top':
+		$featimgpositioning = ' top-lg top-md top-sm top-xs';
+		break;
+	case 'middle':
+		$featimgpositioning = ' middle-lg middle-md middle-sm middle-xs';
+		break;
+	case 'bottom':
+		$featimgpositioning = ' bottom-lg bottom-md bottom-sm bottom-xs';
+		break;
+	default:
+		$featimgpositioning = ' middle-lg middle-md middle-sm middle-xs';
+		break;
+}
 
 switch ($themecolour) {
 	case 'blue':
@@ -96,9 +132,11 @@ switch ($themecolour) {
 		</div>
 		
 		<?php if ($featuredimg): ?>
-		<div class="col col-lg-12 col-md-12 col-sm-12 col-xs-12 home-featured-img">
+		<div class="col col-lg-12 col-md-12 col-sm-12 col-xs-12 home-featured-img<?php echo $tapeoverlaypositioning ?>">
 			
-			<?php echo wp_get_attachment_image( $featuredimg, $featuredimgsize ); ?>
+			<div class="feature-image-container<?php echo $featimgpositioning ?>">	
+				<?php echo wp_get_attachment_image( $featuredimg, $featuredimgsize ); ?>
+			</div>
 			
 		</div>
 		<?php endif; ?>

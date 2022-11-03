@@ -12,7 +12,7 @@ $textcolor = get_field('text_colour');
 $headingcolor = get_field('heading_colour');
 $blockanchor = get_field('block_anchor');
 $reverse = get_field('reverse_columns');
-$narrow = get_field('narrow_row');
+//$narrow = get_field('narrow_row');
 $colratio = get_field('column_ratio');
 $removeBulletSpacing = get_field('remove_spacing_between_bullet_points');
 $gutterspacing = get_field('gutter_space');
@@ -25,6 +25,7 @@ $overlay = get_field('background_image_overlay');
 $maxwidth = get_field('max_width');
 $dasheddivider = get_field('dashed_divider');
 $bgsize = get_field('background_size');
+$offset = get_field('offset_layout');
 
 // CUSTOM ID
 $id = '' . $block['id'];
@@ -37,6 +38,18 @@ if( !empty($block['className']) ) {
 	$className .= ' ' . $block['className'];
 }
 
+switch ($offset) {
+	case 'left':
+		$offset = ' flush-left';
+		break;
+	case 'right':
+		$offset = ' flush-right';
+		break;
+	default:
+		$offset = '';
+		break;
+}
+
 switch ( $bgcolor ) {
 	case 'blue':
 		$shade = 'brandbluebg light';
@@ -47,6 +60,7 @@ switch ( $bgcolor ) {
 	default:
 		$shade = '';
 }
+/*
 switch ( $narrow ) {
 	case '1080':
 		$rowwidth = ' max-width-1080';
@@ -60,6 +74,7 @@ switch ( $narrow ) {
 	default:
 		$rowwidth = '';
 }
+*/
 switch ( $overlay ) {
 	case 'blue':
 		$tint = 'blue-overlay';
@@ -138,12 +153,17 @@ switch ( $gutterspacing ) {
 	case 'default':
 		$gutterspacing = ' gutter_space_2';
 		break;
+	case 'narrow':
+		$gutterspacing = '';
+		break;
 	case 'none':
 		$gutterspacing = ' gutter_space_1';
 		break;
 	default:
 		$gutterspacing = ' gutter_space_2';
 }
+
+include 'includes/row-width.php';
 
 if ( $bgimg ): ?>
 <section<?php if ( $id ): echo ' id="'; echo $id; echo '"'; endif; ?> class="section_has_bg_img<?php if ($dasheddivider): echo ' dashed-divider'; endif; if ( $className ): echo esc_attr($className); endif; if ($hide): echo ' hidden'; endif; ?>" style="background-image: url(<?php echo $bgimg ?>);<?php if ( $bgposition ): echo ' background-position: '; echo $bgposition; else: echo ' background-position: center'; endif; ?>; <?php if ($bgsize == '100'): echo 'background-size: 100%;'; else: echo 'background-size: cover;'; endif; ?> background-repeat: no-repeat;<?php if ( $hide ): echo ' display: none;'; endif; ?>">
@@ -156,7 +176,7 @@ if ( $bgimg ): ?>
 
 <?php endif; ?>
 
-	<div class="innerContainer<?php if ( $rowwidth ): echo $rowwidth; endif; if ( $section_padding ): echo $section_padding; endif; ?>">
+	<div class="innerContainer<?php echo $offset, $rowwidth; if ( $section_padding ): echo $section_padding; endif; ?>">
 				
 		<?php 
 		if ( $rowheading ) {

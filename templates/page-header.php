@@ -7,102 +7,64 @@ $themecolour = get_field('theme_colour');
 $icon = get_field('icon');
 $size = 'icon';
 
-if ( $themecolour ) {
-
-	if ( $themecolour == 'orange' ) {
-		echo	'<div class="pageHeader" style="background-color: #f36f00;">
-				 	<div class="row pageHeaderBgGrid end-lg end-md end-sm">
-				 		<div class="col col-lg-7 col-md-7 col-sm-5 col-xs-12 absoluteImgContainer absolutePositionedImg">'
-				 			. $featuredimg .
-				 		'</div>
-				 	</div>
-			 	
-		   			<div class="innerContainer">
-				 		<div class="row">
-				 			
-				 			<div class="col col-lg-5 col-md-5 col-sm-4 col-xs-12">
-						 		<div class="iconAndTitleContainer clear desktopLayout" style="background-color: #f36f00;">
-						 			<div class="imgContainer">'
-						 				. wp_get_attachment_image( $icon, $size ) .
-						 			'</div>
-						 			<h1>' . $pagetitle . '</h1>
-						 		</div>
-						 	</div>
-						 	
-					 	</div>
-			 		</div>
-				</div>
-				<div class="iconAndTitleContainer mobileLayout" style="background-color: #f36f00;">
-					<div class="imgContainer">'
-						. wp_get_attachment_image( $icon, $size ) .
-					'</div>
-					<h1>' . $pagetitle . '</h1>
-				</div>';
-	} elseif ( $themecolour == 'blue' ) {
-		echo	'<div class="pageHeader" style="background-color: #008fb7;">
-				 	<div class="row pageHeaderBgGrid end-lg end-md end-sm">
-				 		<div class="col col-lg-7 col-md-7 col-sm-5 col-xs-12 absoluteImgContainer absolutePositionedImg">'
-				 			. $featuredimg .
-				 		'</div>
-				 	</div>
-			 	
-		   			<div class="innerContainer">
-				 		<div class="row">
-				 			
-				 			<div class="col col-lg-5 col-md-5 col-sm-4 col-xs-12">
-						 		<div class="iconAndTitleContainer clear desktopLayout" style="background-color: #008fb7;">
-						 			<div class="imgContainer">'
-						 				. wp_get_attachment_image( $icon, $size ) .
-						 			'</div>
-						 			<h1>' . $pagetitle . '</h1>
-						 		</div>
-						 	</div>
-						 	
-					 	</div>
-			 		</div>
-				</div>
-				<div class="iconAndTitleContainer mobileLayout" style="background-color: #008fb7;">
-					<div class="imgContainer">'
-						. wp_get_attachment_image( $icon, $size ) .
-					'</div>
-					<h1>' . $pagetitle . '</h1>
-				</div>';
-	} elseif ( $themecolour == 'navy' ) {
-		echo	'<div class="pageHeader" style="background-color: #012a3c;">
-				 	<div class="row pageHeaderBgGrid end-lg end-md end-sm">
-				 		<div class="col col-lg-7 col-md-7 col-sm-5 col-xs-12 absoluteImgContainer absolutePositionedImg">'
-				 			. $featuredimg .
-				 		'</div>
-				 	</div>
-			 	
-		   			<div class="innerContainer">
-				 		<div class="row">
-				 			
-				 			<div class="col col-lg-5 col-md-5 col-sm-4 col-xs-12">
-						 		<div class="iconAndTitleContainer clear desktopLayout" style="background-color: #012a3c;">
-						 			<div class="imgContainer">'
-						 				. wp_get_attachment_image( $icon, $size ) .
-						 			'</div>
-						 			<h1>' . $pagetitle . '</h1>
-						 		</div>
-						 	</div>
-						 	
-					 	</div>
-			 		</div>
-				</div>
-				<div class="iconAndTitleContainer mobileLayout" style="background-color: #012a3c;">
-					<div class="imgContainer">'
-						. wp_get_attachment_image( $icon, $size ) .
-					'</div>
-					<h1>' . $pagetitle . '</h1>
-				</div>';
-	}
-} else {
-	echo 	'<div class="pageHeader" style="background-image: url(' . $featuredbgimg[0] . ');">
-	 			<div class="innerContainer">
-	 				<div class="iconAndTitleContainer noBgColor clear">
-	 					<h1>' . $pagetitle . '</h1>
-	 				</div>
-	 			</div>
-	 		</div>';
+switch ($themecolour) {
+	case 'orange':
+		$themecolour = 'background-color: #f36f00';
+		break;
+	case 'blue':
+		$themecolour = 'background-color: #008fb7';
+		break;
+	case 'navy':
+		$themecolour = 'background-color: #012a3c';
+		break;
+	default:
+		$themecolour = 'background-image: url(' . $featuredbgimg[0] . ')';
+		break;
 }
+
+echo	
+'<div class="pageHeader" style="' . $themecolour . ';">';
+	if ( !empty($icon) ) {
+	echo
+	'<div class="row pageHeaderBgGrid end-lg end-md end-sm">
+		<div class="col col-lg-7 col-md-7 col-sm-5 col-xs-12 absoluteImgContainer absolutePositionedImg">'
+			. $featuredimg .
+		'</div>
+	</div>';
+	}
+	
+	echo
+	'<div class="innerContainer">';
+				 		
+		if ( !empty($icon) ) {
+		echo
+		'<div class="row">
+			
+			<div class="col col-lg-5 col-md-5 col-sm-4 col-xs-12">
+				<div class="iconAndTitleContainer clear desktopLayout" style="' . $themecolour . '">
+					<div class="imgContainer">'
+						. wp_get_attachment_image( $icon, $size ) .
+					'</div>
+					<h1>' . $pagetitle . '</h1>
+				</div>
+			</div>
+								
+		</div>';
+		} else {
+			echo 
+			'<div class="iconAndTitleContainer noBgColor clear">
+	 			<h1>' . $pagetitle . '</h1>
+	 		</div>';
+		}
+	
+	echo
+	'</div>
+</div>';
+				
+echo
+'<div class="iconAndTitleContainer mobileLayout" style="' . $themecolour . ';">
+	<div class="imgContainer">'
+		. wp_get_attachment_image( $icon, $size ) .
+	'</div>
+	<h1>' . $pagetitle . '</h1>
+</div>';

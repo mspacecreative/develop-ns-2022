@@ -91,5 +91,9 @@ function shipwright_styles() {
     // FONT AWESOME CSS
     wp_register_style( 'fontawesome', 'https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css', array(), null );
     wp_enqueue_style( 'fontawesome' );
+
+    // ADOBE FONTS
+    wp_register_style( 'adobefonts', 'https://use.typekit.net/avx4yiz.css', array(), null );
+    wp_enqueue_style( 'adobefonts' );
 }
 add_action( 'wp_enqueue_scripts', 'shipwright_styles' ); // Add Theme Stylesheet

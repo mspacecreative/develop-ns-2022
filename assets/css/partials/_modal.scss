@@ -1,0 +1,228 @@
+body .modal {
+	padding: 30px 2em;
+	//height: 100vh;
+	height: 100%;
+	z-index: 99999;
+	//background-color: transparent;
+	padding-left: 2em!important;
+}
+.modal-content-inner {
+	height: 100%;
+}
+.modal .modal-dialog {
+	z-index: 999999;
+	//background-color: #fff;
+	cursor: auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+	width: 100%;
+}
+.modal-table-cell {
+	width: 100%;
+}
+.modal .modal-content {
+	position: relative;
+	background-color: #fff;
+	z-index: 1;
+	border-radius: 0;
+	border: none;
+	//padding-bottom: 25px;
+}
+.modal .modal-dialog, body #modal-content {
+    max-width: 800px;
+	margin: auto;
+}
+body .modal-backdrop {
+	height: 100%;
+	width: 100%;
+	position: fixed;
+	background: #000;
+	z-index: 9999;
+	top: 0;
+	left: 0;
+}
+.modal-title {
+	font-size: 30px;
+	line-height: 1.25em;
+	font-family: 'Dosis', sans-serif;
+	//color: $divertgreen;
+}
+body .modal_two_col h1 {
+	margin-bottom: .75em;
+}
+.modal-content table td > .circle_image img {
+	padding: .5em;
+}
+.modal table td:last-of-type {
+	padding-bottom: 0;
+}
+body .modal-backdrop.show {
+	opacity: .7;
+}
+body .modal-content-inner .close {
+	margin: 0;
+	width: 30px;
+    height: 30px;
+    //background-color: $divertmint;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    position: absolute;
+    top: -15px;
+    right: -15px;
+	color: #fff;
+	text-shadow: none;
+    opacity: 1;
+	padding: 0;
+	z-index: 99;
+	background-color: #fff;
+	border: none;
+}
+body .modal-content-inner .close > svg {
+	width: 10px;
+	height: 10px;
+}
+body .modal-content .close span {
+	margin-top: -6px;
+}
+.modal .modal-header {
+	padding: 0;
+	border-bottom: none;
+}
+.modal-header h1 {
+	display: inline-block;
+}
+.header_title_container {
+	width: 100%;
+	padding: 3em 3em 0;
+}
+.modal .modal-body {
+	padding: 0;
+	overflow-x: hidden;
+}
+.modal_content_container {
+	height: 100%;
+}
+.modal-dialog::after {
+    position: absolute;
+    content: "";
+    //background-image: url(../img/graphics/gradient-ellipse.svg);
+    height: 80%;
+    background-position: top right;
+    width: 100%;
+    right: 0;
+    top: 10%;
+    background-repeat: no-repeat;
+}
+.modal-body .row {
+	margin-right: 0;
+	margin-left: 0;
+	clear: both;
+}
+.modal-body .col-lg-6, .modal-body .col-md-6 {
+	padding-right: 0;
+	padding-left: 0;
+}
+.modal-content-inner {
+	overflow: auto;
+}
+.close.close_bottom {
+	opacity: 1;
+    margin: auto;
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	margin-left: -50px;
+	padding: 5px 20px 10px;
+    //background-color: $brandLightGrey;
+}
+.close.close_bottom span {
+	font-size: 15px;
+	//color: $divertmint;
+	text-shadow: none;
+}
+.close.close_bottom span span {
+	width: 10px;
+    height: 10px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 5px;
+    line-height: 1;
+}
+.close.close_bottom span span > svg {
+	width: 10px;
+	height: 10px;
+}
+.modal_two_col .col:first-of-type p {
+	height: 100%;
+	margin: 0;
+}
+.modal_two_col .col:first-of-type img {
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+}
+.modal_two_col .col:last-of-type {
+	padding: 2em 2em 4em;
+}
+.modal_two_col .col:last-of-type > h3:first-of-type {
+	margin-bottom: 0;
+}
+.modal_two_col .col:last-of-type > h3:first-of-type ~ p, .modal_two_col .col:last-of-type > h3:first-of-type ~ ul {
+	margin-top: 20px;
+}
+
+.display-flex {
+	display: flex;
+}
+
+// CTA BUTTONS
+.modal-learn-more, .open-video {
+	position: relative;
+	padding-left: 40px;
+	//color: $divertyellowgreen;
+}
+.modal-learn-more:hover, .open-video:hover {
+	text-decoration: none;
+	//color: $divertgreen;
+}
+.modal-learn-more::before, .open-video::before {
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	left: 0;
+	top: -8px;
+	//border: 1px solid $divertyellowgreen;
+	border-radius: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	//font-weight: bold;
+}
+.modal-learn-more::before {
+	content: "+";
+	padding-top: 3px;
+}
+.open-video::before {
+	content: "";
+	background-image: url(../img/icons/play-arrow.svg);
+	background-position: center;
+	background-size: 8px;
+	background-repeat: no-repeat;
+}
+.video-container {
+	position: relative;
+	padding-bottom: 56.25%;
+	height: 0;
+}
+.video-container > iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%!important;
+	height: 100%!important;
+}

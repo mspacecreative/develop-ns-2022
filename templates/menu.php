@@ -4,17 +4,19 @@
 		<!-- TITLE AND CONTACT INFO -->
 		<div class="row between-lg between-md horizontalStitchBottom bottom-padding">
 			<div class="col col-lg-6 col-md-6 col-sm-12 col-xs-12">
-				<h1><?php echo bloginfo('name'); ?><br /> Annual Report<br /> 2020/2021</h1>
+				<h1><?php echo bloginfo('name'); ?><!--<br /> Annual Report<br /> 2020/2021--></h1>
 			</div>
 			<div class="col col-lg-4 col-md-4 col-sm-12 col-xs-12">
 				<h3 style="margin-bottom: 5px;">Share the Report</h3>
-				<?php echo do_shortcode('[addthis tool="addthis_inline_share_toolbox_s03r"]');
+				
+				<?php echo 
+				'<div style="margin: 20px 0;">' . do_shortcode('[addthis tool="addthis_inline_share_toolbox_s03r"]') . '</div>';
 				
 				$address = get_field('address', 'options');
 				if ( $address ) {
 					echo '<p>' . $address . '</p>';
 				}
-				if ( have_rows('channels', 'options') ) {
+				/*if ( have_rows('channels', 'options') ) {
 				echo '<div class="socialMedia inline">
 						<p style="margin-bottom: 10px;">Follow us on</p>
 					  	<ul>';
@@ -27,7 +29,7 @@
 				}
 				echo 	'</ul>
 					</div>';
-				} ?>
+				}*/ ?>
 			</div>
 			<p>
 				

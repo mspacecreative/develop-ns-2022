@@ -1,0 +1,404 @@
+// CLEARFIX
+.clear::after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+// BACKGROUND IMAGE
+.background-img {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background: url(../img/shore-bg-2.jpg) no-repeat;
+  background-position: center;
+  z-index: -1;
+  display: none;
+}
+
+// BODY TAG
+body {
+  @extend %franklinGothicReg;
+  /*display: none;*/
+}
+
+.mobileLayout {
+  display: none;
+}
+
+.launching-soon {
+  position: fixed;
+  right: -30px;
+  top: 50%;
+  width: auto;
+  height: 80%;
+  z-index: 2;
+  transform: translateY(-50%);
+  opacity: 0.8;
+  display: none;
+}
+
+.launching-soon img {
+  width: auto;
+  height: 100%;
+}
+
+.wrapper {
+  background-color: #fff;
+  overflow-x: hidden;
+}
+
+.innerContainer,
+.wp-block-columns {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 1920px;
+  padding: 0 4em;
+  width: 100%;
+  z-index: 2;
+  position: relative;
+  //overflow-x: hidden;
+}
+
+.innerContainer.flush-left {
+  padding-left: 0;
+}
+
+/*
+.innerContainer .row .column-margins:first-of-type > .flex-gallery {
+  margin-top: 10px;
+}
+*/
+
+.logo {
+  width: 168px;
+  float: left;
+}
+
+.logo img {
+  max-width: 100%;
+  height: auto;
+  width: 100%;
+}
+
+.tagline {
+  text-align: center;
+  padding: 40px 0;
+  max-width: 600px;
+  margin: auto;
+}
+
+.tagline h1 {
+  font-family: "justlovely_slanted_wide", sans-serif;
+  font-size: 80px;
+  color: #9cb9c8;
+  line-height: 1em;
+  margin: 0;
+}
+
+.contact {
+  text-align: center;
+  font-size: 18px;
+}
+
+.mobile-menu p {
+  font-family: "Open Sans", sans-serif;
+}
+
+.mobile-menu {
+  background: rgba(255, 255, 255, 0.95);
+  left: 0;
+  top: 0;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  display: none;
+  z-index: 9;
+}
+
+.social-links svg {
+  color: #000;
+  transition: all 0.25s ease-in-out;
+}
+
+.social-links svg {
+  color: #000;
+}
+
+.social-links svg:hover {
+  color: #9cb9c8;
+  transition: all 0.25s ease-in-out;
+}
+
+.mobile-menu p {
+  margin-bottom: 15px;
+}
+
+.social-links {
+  list-style: none;
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+}
+
+.mobile-menu .social-links {
+  margin: 25px 0 0;
+}
+
+.mobile-menu .social-links li {
+  margin-right: 25px;
+}
+
+.contact p {
+  display: inline-block;
+}
+
+.social-links li {
+  display: inline-block;
+  margin-right: 15px;
+}
+
+.social-links li:last-of-type,
+.mobile-menu .social-links li:last-of-type {
+  margin-right: 0;
+}
+
+.toggle {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  z-index: 10;
+}
+
+.fab {
+  color: #000;
+}
+
+.launching-soon-mobile {
+  display: none;
+}
+
+.toggle .fa-anchor {
+  transition: all 0.5s ease-in-out;
+  font-size: 20px;
+}
+
+.toggle.open .fa-anchor {
+  transform: rotate(180deg);
+  transition: all 0.5s ease-in-out;
+}
+
+.feedContainer {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1080px;
+  padding: 1em;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.75);
+  margin-top: 50px;
+}
+footer {
+  padding: 4em 0;
+  position: relative;
+  background-image: url(../img/textures/footer-sketch.jpg);
+  background-size: cover;
+  background-position: bottom center;
+  background-repeat: no-repeat;
+}
+.dashed-border__top,
+.dashed-border__top::before,
+.homePagePagesFeedContainer .row:first-of-type .col:first-child {
+  position: relative;
+}
+footer::before,
+.dashed-border__top::before,
+.homePagePagesFeedContainer .row:first-of-type .col:first-child::before {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  content: "";
+  background-image: url(../img/textures/horizontal-dashed-line-dark.png);
+  height: 1px;
+  left: 0;
+}
+.hero::before {
+  bottom: 0;
+  top: auto;
+}
+footer p {
+  font-size: 14px;
+}
+footer .row .col:last-of-type {
+  align-self: flex-end;
+  display: flex;
+  justify-content: flex-end;
+}
+
+// HORIZONTAL STITCH TEXTURE
+.horizontalStitchTop,
+.horizontalStitchBottom,
+#experience-quote,
+#queens-marque {
+  position: relative;
+}
+.horizontalStitchBottom::after,
+.horizontalStitchTop::before,
+#experience-quote::after,
+#queens-marque::after,
+#queens-marque::before,
+#cove::after,
+.dashed-divider::after {
+  position: absolute;
+  width: 100%;
+  content: "";
+  background-image: url(../img/textures/horizontal-dashed-line-dark.png);
+  height: 1px;
+  left: 0;
+  z-index: 1;
+}
+.horizontalStitchBottom::after,
+#experience-quote::after,
+#queens-marque::after,
+#cove::after,
+#marine-visitation-plan::after {
+  bottom: 0;
+}
+.horizontalStitchTop::before,
+#queens-marque::before {
+  top: 0;
+}
+
+// TAPE TEXTURES
+#ceo-message/*, #confidence-comes-with-experience*/ {
+  position: relative;
+  background-image: url(../img/textures/ceo-board-chair-sketch.jpg);
+  background-position: bottom left;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#inverness-growth-strategy,
+#georges-island,
+#ceo-board-chair-messages,
+.videoOverlay {
+  position: relative;
+}
+#inverness-growth-strategy::after,
+#georges-island::after {
+  position: absolute;
+  top: 35%;
+  content: "";
+  background-image: url(../img/textures/body-sketch.png);
+  background-position: center left;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+#ceo-board-chair-messages::after,
+#cove::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  background-image: url(../img/textures/body-sketch-tall.jpg);
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+#internet-for-ns-initiative,
+#peggys-cove {
+  background-image: url(../img/textures/intro-sketch.jpg);
+  background-position: bottom left;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.message-from-board-chair-and-ceo .iconAndTitleContainer {
+  padding: 80px 0;
+}
+.message-from-board-chair-and-ceo .pageHeader::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0));
+}
+.tape-top-left,
+.tape-top-right,
+.tape-bottom-right,
+.tape-bottom-left {
+  position: relative;
+}
+#ceo-message::after,
+.tape-bottom-left:before {
+  position: absolute;
+  bottom: -50px;
+  left: 0;
+  content: "";
+  background-image: url(../img/textures/tape-left.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 250px;
+  height: 99px;
+  z-index: 999;
+}
+
+//.homePagePagesFeedContainer > .row:nth-child(2)::before,
+.thriving-communities .wp-block-image.videoOverlay::before,
+.tape-top-right:before {
+  position: absolute;
+  top: -50px;
+  right: 0;
+  content: "";
+  background-image: url(../img/textures/tape-right.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 150px;
+  height: 108px;
+  z-index: 2;
+}
+
+.topLeftCaption::before,
+.working-waterfronts .wp-block-image.videoOverlay::before,
+.tape-top-left:before {
+  position: absolute;
+  top: -50px;
+  left: 0;
+  content: "";
+  background-image: url(../img/textures/tape-left-narrow.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 100px;
+  height: 102px;
+  z-index: 2;
+}
+
+.topLeftCaption::after,
+.working-waterfronts .wp-block-image.videoOverlay::after,
+.tape-bottom-right:before {
+  position: absolute;
+  bottom: -50px;
+  right: 0;
+  content: "";
+  background-image: url(../img/textures/tape-right-narrow.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 250px;
+  height: 99px;
+  z-index: 2;
+}
+
+.homePagePagesFeedContainer > .row:nth-child(2) .absolutePositionedImg img {
+  object-position: right;
+}
