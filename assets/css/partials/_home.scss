@@ -102,15 +102,6 @@
   align-items: flex-start;
   justify-content: center;
 }
-.half_half_section:nth-of-type(even) > .checker-board-content .col-inner {
-  align-items: flex-end;
-}
-.half_half_section:nth-of-type(odd) > .checker-board-img .col-inner {
-  margin-left: auto;
-}
-.half_half_section:nth-of-type(even) > .checker-board-img .col-inner {
-  margin-right: auto;
-}
 
 // SLICK SLIDER
 .slick-slider,
