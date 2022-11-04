@@ -10,6 +10,7 @@ while ( have_rows('flexible_content') ): the_row();
 	$imgalignment = get_sub_field('image_alignment');
 	$captionalignment = get_sub_field('caption_alignment');
 	$flexbox = get_sub_field('flexbox_layout');
+	$topmargin = get_sub_field('top_margin');
 	
 	switch ($captionalignment) {
 		case 'left':
@@ -40,7 +41,7 @@ while ( have_rows('flexible_content') ): the_row();
 	}
 					
 		if ( $flexgallery ): ?>
-		<ul class="flex-gallery<?php if ($imgalignment == 'center'): echo ' img-align-center'; elseif ($imgalignment == 'right'): echo ' img-align-right'; endif; if ($flexbox): echo ' flexbox-layout'; endif; ?>"<?php if ($maxwidth): echo ' style="max-width: '; echo $maxwidth; echo ';"'; endif; ?>>
+		<ul class="flex-gallery<?php if ($imgalignment == 'center'): echo ' img-align-center'; elseif ($imgalignment == 'right'): echo ' img-align-right'; endif; if ($flexbox): echo ' flexbox-layout'; endif; ?>"<?php if ($maxwidth && $topmargin): echo ' style="max-width: '; echo $maxwidth; echo '; margin-top: '; echo $topmargin; echo ';"'; elseif ($maxwidth): echo ' style="max-width: '; echo $maxwidth; echo ';"'; elseif ($topmargin): echo ' style="margin-top: '; echo $topmargin; echo ';"'; endif; ?>>
 							
 			<?php foreach ( $flexgallery as $fleximage ):
 			$caption = $fleximage['caption']; ?>
@@ -69,18 +70,20 @@ while ( have_rows('flexible_content') ): the_row();
 						
 	elseif ( get_row_layout() == 'spacer' ):
 	$spacerheight = get_sub_field('spacer_height');
-	switch ($spacerheight) {
+	$customspacing = $spacerheight == 'custom' ? ' style="height: ' . get_sub_field('custom_spacing') . ';"' : '';
+	/*switch ($spacerheight) {
 		case 'default':
 			$spacerheight = '';
 			break;
 		case 'tall':
-		$spacerheight = ' flex-spacer-tall';
-		break;
-	default:
-		$spacerheight = '';
-	} ?>
+			$spacerheight = ' flex-spacer-tall';
+			break;
+		default:
+			$spacerheight = '';
+			break;
+	}*/ ?>
 						
-		<div class="flex-spacer<?php if ($spacerheight): echo $spacerheight; endif; ?>">&nbsp;</div>
+		<div class="flex-spacer<?php if ($spacerheight == 'tall'): echo ' flex-spacer-tall'; endif; ?>"<?php echo $customspacing ?>>&nbsp;</div>
 						
 	<?php elseif ( get_row_layout() == 'post_content' ):
 	$video = get_sub_field('video');
