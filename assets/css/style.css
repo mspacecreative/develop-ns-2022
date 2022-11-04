@@ -2952,7 +2952,7 @@ h4 {
 p {
   line-height: 1.5em;
   font-size: 17px;
-  margin-bottom: 15px;
+  margin-bottom: 30px;
   margin-top: 0;
 }
 
@@ -5757,9 +5757,6 @@ span.at-icon-wrapper {
   }
   .mobileOnly {
     display: block;
-  }
-  p {
-    margin-bottom: 30px;
   }
   #queens-marque {
     padding: 4em 0;
