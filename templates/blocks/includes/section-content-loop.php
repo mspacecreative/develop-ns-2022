@@ -14,7 +14,8 @@ switch ($padding) {
 		$padding = ' top-bottom-padding';
 		break;
 	default:
-		$padding = ' top-bottom-padding';
+		$padding = '';
+		break;
 }
 switch ($txtalign) {
 	case 'left':
@@ -30,7 +31,7 @@ switch ($txtalign) {
 		$txtalign = '';
 } ?>
 
-<div class="clear<?php if ($padding): echo $padding; endif; if ($txtalign): echo $txtalign; endif; ?>">
+<div class="clear<?php echo $padding, $txtalign ?>">
 	
 	<?php
 	if ( $content ) {
