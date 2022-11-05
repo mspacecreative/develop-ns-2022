@@ -5831,6 +5831,9 @@ span.at-icon-wrapper {
   .bottomMarginMobile__1em .bottomMarginMobile:first-of-type {
     margin-bottom: 1em;
   }
+  .no-bottom-margin-on-mobile {
+    margin-bottom: 0;
+  }
 }
 
 @media (max-width: 320px) and (orientation: landscape) {
@@ -5870,6 +5873,9 @@ span.at-icon-wrapper {
   }
   .bottomMarginMobile__1em .bottomMarginMobile:first-of-type {
     margin-bottom: 1em;
+  }
+  .no-bottom-margin-on-mobile {
+    margin-bottom: 0;
   }
 }
 
