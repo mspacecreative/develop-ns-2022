@@ -5825,6 +5825,9 @@ span.at-icon-wrapper {
   .flex-gallery {
     max-width: 100% !important;
   }
+  .column-margins .flex-gallery:first-child {
+    margin-top: 0 !important;
+  }
 }
 
 @media (max-width: 320px) and (orientation: landscape) {
@@ -5858,6 +5861,9 @@ span.at-icon-wrapper {
   }
   .flex-gallery {
     max-width: 100% !important;
+  }
+  .column-margins .flex-gallery:first-child {
+    margin-top: 0 !important;
   }
 }
 
