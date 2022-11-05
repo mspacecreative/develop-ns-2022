@@ -71,6 +71,7 @@ while ( have_rows('flexible_content') ): the_row();
 	elseif ( get_row_layout() == 'spacer' ):
 	$spacerheight = get_sub_field('spacer_height');
 	$customspacing = $spacerheight == 'custom' ? ' style="height: ' . get_sub_field('custom_spacing') . ';"' : '';
+	$hideonmobile = get_sub_field('hide_on_mobile') ? ' hide-on-mobile' : '';
 	/*switch ($spacerheight) {
 		case 'default':
 			$spacerheight = '';
@@ -83,7 +84,7 @@ while ( have_rows('flexible_content') ): the_row();
 			break;
 	}*/ ?>
 						
-		<div class="flex-spacer<?php if ($spacerheight == 'tall'): echo ' flex-spacer-tall'; endif; ?>"<?php echo $customspacing ?>>&nbsp;</div>
+		<div class="flex-spacer<?php if ($spacerheight == 'tall'): echo ' flex-spacer-tall'; endif; echo $hideonmobile ?>"<?php echo $customspacing ?>>&nbsp;</div>
 						
 	<?php elseif ( get_row_layout() == 'post_content' ):
 	$video = get_sub_field('video');

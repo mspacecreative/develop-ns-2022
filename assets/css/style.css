@@ -5842,6 +5842,11 @@ span.at-icon-wrapper {
     margin-left: 0 !important;
     margin-right: 0 !important;
   }
+  .flex-spacer.hide-on-mobile,
+  .flex-spacer-tall.hide-on-mobile,
+  .hide-on-mobile {
+    display: none;
+  }
 }
 
 @media (min-width: 768px) {
