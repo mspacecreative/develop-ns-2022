@@ -118,12 +118,18 @@
   }
 }
 
-@media (max-width: 850px) and (orientation: portrait) {
+@media (max-width: 880px) and (orientation: portrait) {
   .contact {
     display: none;
   }
   .social-links {
     font-size: 30px;
+  }
+}
+
+@media (max-width: 880px) and (orientation: landscape) {
+  .flex-gallery {
+    max-width: 100% !important;
   }
 }
 
@@ -156,6 +162,10 @@
 
   .flex-spacer-tall.flex-spacer__mobile {
     height: 2em;
+  }
+
+  .flex-gallery {
+    max-width: 100% !important;
   }
 }
 
