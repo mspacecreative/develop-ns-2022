@@ -135,6 +135,10 @@
   .column-margins .flex-gallery:first-child {
     margin-top: 0 !important;
   }
+
+  .bottomMarginMobile__1em .bottomMarginMobile:first-of-type {
+    margin-bottom: 1em;
+  }
 }
 
 @media (max-width: 320px) and (orientation: landscape) {
@@ -174,6 +178,10 @@
 
   .column-margins .flex-gallery:first-child {
     margin-top: 0 !important;
+  }
+
+  .bottomMarginMobile__1em .bottomMarginMobile:first-of-type {
+    margin-bottom: 1em;
   }
 }
 
