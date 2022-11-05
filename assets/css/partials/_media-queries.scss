@@ -153,6 +153,10 @@
   .hide-on-mobile {
     display: none;
   }
+
+  .flex-spacer-tall.flex-spacer__mobile {
+    height: 2em;
+  }
 }
 
 @media (min-width: 768px) {
