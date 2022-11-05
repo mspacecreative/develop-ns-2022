@@ -199,8 +199,9 @@ if ( $bgimg ): ?>
 			$heading = get_sub_field('heading');
 			$content = get_sub_field('content');
 			$contenttype = get_sub_field('content_type');
-			$mobile = get_sub_field('mobile_spacing');
+			$nobottommarginonmobile = get_sub_field('no_bottom_margin_on_mobile') ? ' no-bottom-margin-on-mobile' : '';
 			$animatecol = get_sub_field('animate_column');
+
 				 		
 			switch ( $colratio ) {
 				case 'three-fifth-two-fifth':
@@ -225,7 +226,7 @@ if ( $bgimg ): ?>
 					$colwidth = 'col-lg-6';
 			} ?>
 			 		
-			<div<?php if ( $anchor ): echo ' id="'; echo $anchor; echo '"'; endif; if ($animatecol): echo ' data-aos="fade-up"'; endif; ?> class="<?php if ( $colwidth ): echo $colwidth; echo ' '; else: echo 'col-lg-6 '; endif; if ( $mobile ): echo ' keepSpacing '; endif; ?>bottomMarginMobile col-md-6 col-sm-6 col-xs-12 col">
+			<div<?php if ( $anchor ): echo ' id="'; echo $anchor; echo '"'; endif; if ($animatecol): echo ' data-aos="fade-up"'; endif; ?> class="<?php if ( $colwidth ): echo $colwidth; echo ' '; else: echo 'col-lg-6 '; endif; echo $nobottommarginonmobile ?>bottomMarginMobile col-md-6 col-sm-6 col-xs-12 col">
 					
 				<?php include 'includes/column-margins.php';
 				
