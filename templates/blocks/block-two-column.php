@@ -205,29 +205,29 @@ if ( $bgimg ): ?>
 				 		
 			switch ( $colratio ) {
 				case 'three-fifth-two-fifth':
-					$colratio = ' col-lg-7 col-md-7 ';
+					$colwidth = ' col-lg-7 col-md-7 ';
 					break;
 				case 'two-fifth-three-fifth':
-					$colratio = ' col-lg-5 col-md-5 ';
+					$colwidth = ' col-lg-5 col-md-5 ';
 					break;
 				case 'two-third-one-third':
-					$colratio = ' col-lg-8 col-md-8 ';
+					$colwidth = ' col-lg-8 col-md-8 ';
 					break;
 				case 'one-third-two-third':
-					$colratio = ' col-lg-4 col-md-4 ';
+					$colwidth = ' col-lg-4 col-md-4 ';
 					break;
 				case 'three-quarter-one-quarter':
-					$colratio = ' col-lg-10 col-md-10 ';
+					$colwidth = ' col-lg-10 col-md-10 ';
 					break;
 				case 'one-quarter-three-quarter':
-					$colratio = ' col-lg-2 col-md-2 ';
+					$colwidth = ' col-lg-2 col-md-2 ';
 					break;
 				default:
-					$colratio = ' col-lg-6 col-md-6 ';
+					$colwidth = ' col-lg-6 col-md-6 ';
 					break;
 			} ?>
 			 		
-			<div<?php if ( $anchor ): echo ' id="'; echo $anchor; echo '"'; endif; if ($animatecol): echo ' data-aos="fade-up"'; endif; ?> class="col<?php echo $colratio ?>col-sm-6 col-xs-12 bottomMarginMobile<?php echo $nobottommarginonmobile ?>">
+			<div<?php if ( $anchor ): echo ' id="'; echo $anchor; echo '"'; endif; if ($animatecol): echo ' data-aos="fade-up"'; endif; ?> class="col<?php echo $colwidth ?>col-sm-6 col-xs-12 bottomMarginMobile<?php echo $nobottommarginonmobile ?>">
 					
 				<?php include 'includes/column-margins.php';
 				
