@@ -193,7 +193,7 @@ figcaption {
   margin: 0 0 2em;
 }
 .flex-gallery li:last-of-type {
-  margin-bottom: 0;
+  margin-bottom: 0 !important;
 }
 /*
 .flex-gallery img {
