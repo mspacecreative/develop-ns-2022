@@ -72,7 +72,7 @@ while ( have_rows('flexible_content') ): the_row();
 	$spacerheight = get_sub_field('spacer_height');
 	$customspacing = $spacerheight == 'custom' ? ' style="height: ' . get_sub_field('custom_spacing') . ';"' : '';
 	$hideonmobile = get_sub_field('hide_on_mobile') ? ' hide-on-mobile' : '';
-	$reduceheightonmobile = get_sub_field('hide_on_mobile') == 'FALSE' && get_sub_field('reduce_height_on_mobile') ? ' flex-spacer__mobile' : '';
+	$reduceheightonmobile = (get_sub_field('hide_on_mobile') == 'FALSE' && get_sub_field('reduce_height_on_mobile')) ? ' flex-spacer__mobile' : '';
 	/*switch ($spacerheight) {
 		case 'default':
 			$spacerheight = '';
