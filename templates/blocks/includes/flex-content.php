@@ -44,11 +44,18 @@ while ( have_rows('flexible_content') ): the_row();
 		<ul class="flex-gallery<?php if ($imgalignment == 'center'): echo ' img-align-center'; elseif ($imgalignment == 'right'): echo ' img-align-right'; endif; if ($flexbox): echo ' flexbox-layout'; endif; ?>"<?php if ($maxwidth && $topmargin): echo ' style="max-width: '; echo $maxwidth; echo '; margin-top: '; echo $topmargin; echo ';"'; elseif ($maxwidth): echo ' style="max-width: '; echo $maxwidth; echo ';"'; elseif ($topmargin): echo ' style="margin-top: '; echo $topmargin; echo ';"'; endif; ?>>
 							
 			<?php foreach ( $flexgallery as $fleximage ):
-			$caption = $fleximage['caption']; ?>
+			$caption = $fleximage['caption'];
+			$imglink = get_field('article_url', $fleximage->ID); ?>
 			<li<?php if ($animate): echo ' data-aos="fade-'; if ($animatedirection): echo $animatedirection; endif; echo'"'; endif; ?>>
+				<?php if ($imglink) : ?>
+				<a href="<?php echo $imglink ?> target="_blank">
+				<?php endif; ?>
 				<img src="<?php echo $fleximage['sizes']['xlarge']; ?>" alt="<?php echo $fleximage['alt']; ?>" />
 				<?php if ($caption): ?>
 				<p class="img-caption<?php if ($captionalignment): echo $captionalignment; endif; ?>"><?php echo $caption ?></p>
+				<?php endif; ?>
+				<?php if ($imglink) : ?>
+				</a>
 				<?php endif; ?>
 			</li>
 			<?php endforeach; ?>
