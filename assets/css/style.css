@@ -2120,7 +2120,7 @@ body .fas {
   text-align: right;
 }
 
-.button {
+body:not(.wp-admin) .button {
   text-transform: uppercase;
   color: #fff;
   padding: 10px 40px;
@@ -2132,7 +2132,7 @@ body .fas {
   transition: 0.25s ease-in-out;
 }
 
-.button.light {
+body:not(.wp-admin) .button.light {
   background-color: #fff;
   border: 1px solid #fff;
   color: #fff;
