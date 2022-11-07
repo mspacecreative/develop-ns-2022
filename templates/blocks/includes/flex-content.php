@@ -48,7 +48,7 @@ while ( have_rows('flexible_content') ): the_row();
 			$imglink = get_field('article_url', $fleximage['ID']); ?>
 			<li<?php if ($animate): echo ' data-aos="fade-'; if ($animatedirection): echo $animatedirection; endif; echo'"'; endif; ?>>
 				<?php if ($imglink) : ?>
-				<a href="<?php echo $imglink ?> target="_blank">
+				<a href="<?php echo $imglink ?>" target="_blank">
 				<?php endif; ?>
 				<img src="<?php echo $fleximage['sizes']['xlarge']; ?>" alt="<?php echo $fleximage['alt']; ?>" />
 				<?php if ($caption): ?>
