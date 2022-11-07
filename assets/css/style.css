@@ -3236,6 +3236,18 @@ figure.wp-block-image {
   position: relative;
 }
 
+.absolutePositionedImg::after {
+  position: absolute;
+  content: "";
+  background-image: url(../img/overlays/page-header-sketch-overlay.png);
+  right: 0;
+  bottom: -60px;
+  width: 100%;
+  height: 100%;
+  background-size: 80%;
+  background-position: bottom right;
+}
+
 .innerContainer.absoluteCaptionInnerContainer {
   position: absolute;
   top: -40px;
