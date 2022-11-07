@@ -113,6 +113,10 @@ section {
   padding: 50px 0;
   position: relative;
 }
+.iconAndTitleContainer h1 {
+  position: relative;
+  z-index: 3;
+}
 .pageHeader h1 {
   max-width: 350px;
   color: #fff;

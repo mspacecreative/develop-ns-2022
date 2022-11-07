@@ -2391,6 +2391,11 @@ section {
   position: relative;
 }
 
+.iconAndTitleContainer h1 {
+  position: relative;
+  z-index: 3;
+}
+
 .pageHeader h1 {
   max-width: 350px;
   color: #fff;
@@ -3247,6 +3252,7 @@ figure.wp-block-image {
   background-size: 90%;
   background-position: bottom right;
   background-repeat: no-repeat;
+  z-index: 2;
 }
 
 .innerContainer.absoluteCaptionInnerContainer {
