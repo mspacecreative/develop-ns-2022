@@ -45,7 +45,7 @@ while ( have_rows('flexible_content') ): the_row();
 							
 			<?php foreach ( $flexgallery as $fleximage ):
 			$caption = $fleximage['caption'];
-			$imglink = get_field('article_url', $fleximage->ID); ?>
+			$imglink = get_field('article_url', $fleximage['ID']); ?>
 			<li<?php if ($animate): echo ' data-aos="fade-'; if ($animatedirection): echo $animatedirection; endif; echo'"'; endif; ?>>
 				<?php if ($imglink) : ?>
 				<a href="<?php echo $imglink ?> target="_blank">
