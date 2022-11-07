@@ -26,8 +26,8 @@ echo
 '<div class="pageHeader" style="' . $themecolour . ';">';
 	if ( !empty($icon) ) {
 	echo
-	'<div class="row pageHeaderBgGrid end-lg end-md end-sm">
-		<div class="col col-lg-7 col-md-7 col-sm-5 col-xs-12 absoluteImgContainer absolutePositionedImg">'
+	'<div class="row pageHeaderBgGrid end-lg end-md end-sm end-xs">
+		<div class="col col-lg-7 col-md-7 col-sm-5 col-xs-6 absoluteImgContainer absolutePositionedImg">'
 			. $featuredimg .
 		'</div>
 	</div>';

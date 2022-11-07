@@ -746,6 +746,10 @@
   #georges-island::after {
     background-size: 120%;
   }
+  .pageHeaderBgGrid .col-xs-6.absoluteImgContainer {
+    flex-basis: 100%;
+    max-width: 100%;
+  }
 }
 
 @media (max-width: 350px) {
@@ -839,10 +843,12 @@
   blockquote::before {
     font-size: 80px;
   }
+  /*
   .pageHeader .innerContainer .row > .col {
     padding-top: 50px;
     padding-bottom: 50px;
   }
+  */
   .iconAndTitleContainer {
     background-color: $brandOrange;
     margin-left: -2em;
