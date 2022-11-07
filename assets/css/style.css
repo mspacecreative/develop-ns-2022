@@ -4862,8 +4862,12 @@ header.up ~ .wrapper {
 }
 
 .menuToggle a {
-  padding-right: 25px;
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .downloadFinancials a {
@@ -5018,9 +5022,6 @@ body.menuOpen {
   outline: none;
   padding: 0;
   margin-left: 10px;
-  right: 0;
-  position: absolute;
-  top: -1px;
 }
 
 .hamburger.is-active:hover,
