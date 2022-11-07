@@ -12,12 +12,26 @@
 		</div>
 	</div>
 	
+	<?php
+	$images = get_field('slider_images');
+	$size = 'full'; ?>
 	<!-- HERO CAROUSEL -->
 	<div class="carouselContainer">
 		<div class="carousel">
+			<?php 
+			if ($images):
+			foreach ($images as $image) : ?>
+			<div>
+				<?php echo wp_get_attachment_image( $image, $size ); ?>
+			</div>
+			<?php 
+			endforeach;
+			else : ?>
 			<div>
 				<img src="<?php echo get_home_url(); ?>/wp-content/themes/develop-ns-2022/assets/img/hero/Peggys-Cove-new-decking-homepage.jpg">
 			</div>
+			<?php 
+			endif; ?>
 		</div>
 	</div>
 	<!-- / HERO CAROUSEL -->
