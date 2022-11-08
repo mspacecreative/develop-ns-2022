@@ -6220,6 +6220,7 @@ span.at-icon-wrapper {
     bottom: -45px;
     top: auto;
     height: 85px;
+    background-position: center;
   }
   .topLeftCaption::before,
   .working-waterfronts .wp-block-image.videoOverlay::before,
