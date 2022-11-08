@@ -369,7 +369,8 @@
   #ceo-message::after,
   .topLeftCaption::after,
   .working-waterfronts .wp-block-image.videoOverlay::after,
-  .tape-bottom-left:before {
+  .tape-bottom-left:before,
+  .tape-top-right-bottom-left::before {
     width: 125px;
     height: 50px;
     bottom: -25px;
@@ -384,10 +385,14 @@
     top: -25px;
   }
 
+  .tape-top-right-bottom-left::after {
+    bottom: -25px;
+    top: auto;
+  }
+
   .topLeftCaption::before,
   .working-waterfronts .wp-block-image.videoOverlay::before,
-  .tape-top-left:before,
-  .tape-top-right-bottom-left::before {
+  .tape-top-left:before {
     width: 50px;
     height: 51px;
     top: -25px;
