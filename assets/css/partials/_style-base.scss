@@ -333,11 +333,16 @@ footer .row .col:last-of-type {
 .tape-top-left,
 .tape-top-right,
 .tape-bottom-right,
-.tape-bottom-left {
+.tape-bottom-left,
+.tape-top-right-bottom-right,
+.tape-top-left-bottom-left,
+.tape-top-right-bottom-left,
+.tape-top-left-bottom-right {
   position: relative;
 }
-#ceo-message::after,
-.tape-bottom-left:before {
+.tape-bottom-left:before,
+.tape-top-left-bottom-left::before,
+.tape-top-left-bottom-left::after {
   position: absolute;
   bottom: -50px;
   left: 0;
@@ -350,9 +355,16 @@ footer .row .col:last-of-type {
   z-index: 999;
 }
 
+.tape-top-left-bottom-left::after {
+  bottom: auto;
+  top: -50px;
+}
+
 //.homePagePagesFeedContainer > .row:nth-child(2)::before,
 .thriving-communities .wp-block-image.videoOverlay::before,
-.tape-top-right:before {
+.tape-top-right:before,
+.tape-top-right-bottom-right::before,
+.tape-top-right-bottom-right::after {
   position: absolute;
   top: -50px;
   right: 0;
@@ -363,6 +375,11 @@ footer .row .col:last-of-type {
   width: 150px;
   height: 108px;
   z-index: 2;
+}
+
+.tape-top-right-bottom-right::after {
+  bottom: -50px;
+  top: auto;
 }
 
 .topLeftCaption::before,

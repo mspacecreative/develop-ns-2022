@@ -19,6 +19,18 @@ switch ($tapeplacement) {
 	case 'bottom-right':
 		$tapeplacement = ' tape-bottom-right';
 		break;
+	case 'top-right-bottom-right':
+		$tapeplacement = ' tape-top-right-bottom-right';
+		break;
+	case 'top-left-bottom-left':
+		$tapeplacement = ' tape-top-left-bottom-left';
+		break;
+	case 'top-left-bottom-right':
+		$tapeplacement = ' tape-top-left-bottom-right';
+		break;
+	case 'top-right-bottom-left':
+		$tapeplacement = ' tape-top-right-bottom-left';
+		break;
 	default:
 		$tapeplacement = '';
 }
