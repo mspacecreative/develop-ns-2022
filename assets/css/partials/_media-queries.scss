@@ -370,7 +370,8 @@
   .topLeftCaption::after,
   .working-waterfronts .wp-block-image.videoOverlay::after,
   .tape-bottom-left:before,
-  .tape-top-right-bottom-left::before {
+  .tape-top-right-bottom-left::before,
+  .tape-top-right-bottom-right::after {
     width: 125px;
     height: 50px;
     bottom: -25px;
