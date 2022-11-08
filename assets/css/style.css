@@ -6201,6 +6201,10 @@ span.at-icon-wrapper {
     height: 50px;
     bottom: -25px;
   }
+  .tape-top-right-bottom-left::before {
+    top: -25px;
+    bottom: auto;
+  }
   .homePagePagesFeedContainer > .row:nth-child(2)::before,
   .thriving-communities .wp-block-image.videoOverlay::before,
   .tape-top-right:before,
