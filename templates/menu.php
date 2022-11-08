@@ -17,7 +17,7 @@
 					echo '<p>' . $address . '</p>';
 				}
 				if ( have_rows('channels', 'options') ) {
-				echo '<div class="socialMedia inline">
+				echo '<div class="socialMedia inline" style="margin-top: 20px;">
 						<p style="margin-bottom: 10px;">Follow us on</p>
 					  	<ul>';
 				while ( have_rows('channels', 'options') ) {
