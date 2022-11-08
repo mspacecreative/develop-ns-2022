@@ -16,7 +16,7 @@
 				if ( $address ) {
 					echo '<p>' . $address . '</p>';
 				}
-				/*if ( have_rows('channels', 'options') ) {
+				if ( have_rows('channels', 'options') ) {
 				echo '<div class="socialMedia inline">
 						<p style="margin-bottom: 10px;">Follow us on</p>
 					  	<ul>';
@@ -29,7 +29,7 @@
 				}
 				echo 	'</ul>
 					</div>';
-				}*/ ?>
+				} ?>
 			</div>
 			<p>
 				
