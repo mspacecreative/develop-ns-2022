@@ -6567,8 +6567,7 @@ span.at-icon-wrapper {
     left: 2em;
   }
   .heroContentBox {
-    padding: 2em 2em 2em 4em;
-    max-width: 100%;
+    padding: 2em;
   }
   .toggle {
     display: none;
