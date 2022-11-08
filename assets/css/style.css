@@ -6894,6 +6894,9 @@ span.at-icon-wrapper {
         flex-basis: 55%;
     max-width: 55%;
   }
+  .absolutePositionedImg::after {
+    bottom: -80px;
+  }
 }
 
 @media only screen and (min-width: 64em) and (max-width: 74em) {
