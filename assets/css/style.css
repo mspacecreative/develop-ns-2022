@@ -2166,21 +2166,21 @@ body:not(.wp-admin) .button.blue_bg {
   border-color: #008fb7;
 }
 
-.orange_bg .button.light {
+body:not(.wp-admin) .orange_bg .button.light {
   color: #f36f00;
 }
 
-.blue_bg .button.light {
+body:not(.wp-admin) .blue_bg .button.light {
   color: #008fb7;
 }
 
-.navy_bg .button.light {
+body:not(.wp-admin) .navy_bg .button.light {
   color: #012a3c;
 }
 
-.navy_bg .button.light:hover,
-.orange_bg .button.light:hover,
-.blue_bg .button.light:hover {
+body:not(.wp-admin) .navy_bg .button.light:hover,
+body:not(.wp-admin) .orange_bg .button.light:hover,
+body:not(.wp-admin) .blue_bg .button.light:hover {
   background-color: transparent;
   color: #fff;
   -webkit-transition: 0.25s ease-in-out;
