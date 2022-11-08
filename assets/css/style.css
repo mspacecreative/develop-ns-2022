@@ -2151,7 +2151,7 @@ body:not(.wp-admin) .button.light {
   color: #008fb7;
 }
 
-.button.navy_bg {
+body:not(.wp-admin) .button.navy_bg {
   background-color: #012a3c;
   border-color: #012a3c;
 }

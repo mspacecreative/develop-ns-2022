@@ -22,7 +22,7 @@ body:not(.wp-admin) .button.light {
   background-color: transparent;
   color: $brandBlue;
 }
-.button.navy_bg {
+body:not(.wp-admin) .button.navy_bg {
   background-color: $brandNavy;
   border-color: $brandNavy;
 }
