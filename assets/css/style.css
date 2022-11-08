@@ -6208,12 +6208,14 @@ span.at-icon-wrapper {
   .homePagePagesFeedContainer > .row:nth-child(2)::before,
   .thriving-communities .wp-block-image.videoOverlay::before,
   .tape-top-right:before,
-  .tape-top-right-bottom-left::after {
+  .tape-top-right-bottom-left::after,
+  .tape-top-right-bottom-right::before {
     width: 75px;
     height: 59px;
     top: -25px;
   }
-  .tape-top-right-bottom-left::after {
+  .tape-top-right-bottom-left::after,
+  .tape-top-right-bottom-right::after {
     bottom: -45px;
     top: auto;
     height: 85px;
