@@ -6203,7 +6203,7 @@ span.at-icon-wrapper {
   .homePagePagesFeedContainer > .row:nth-child(2)::before,
   .thriving-communities .wp-block-image.videoOverlay::before,
   .tape-top-right:before,
-  .tape-top-right-bottom-left::before {
+  .tape-top-right-bottom-left::after {
     width: 75px;
     height: 59px;
     top: -25px;
@@ -6211,7 +6211,7 @@ span.at-icon-wrapper {
   .topLeftCaption::before,
   .working-waterfronts .wp-block-image.videoOverlay::before,
   .tape-top-left:before,
-  .tape-top-right-bottom-left::after {
+  .tape-top-right-bottom-left::before {
     width: 50px;
     height: 51px;
     top: -25px;
