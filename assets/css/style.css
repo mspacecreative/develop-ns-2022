@@ -2156,12 +2156,12 @@ body:not(.wp-admin) .button.light {
   border-color: #012a3c;
 }
 
-.button.orange_bg {
+body:not(.wp-admin) .button.orange_bg {
   background-color: #f36f00;
   border-color: #f36f00;
 }
 
-.button.blue_bg {
+body:not(.wp-admin) .button.blue_bg {
   background-color: #008fb7;
   border-color: #008fb7;
 }
