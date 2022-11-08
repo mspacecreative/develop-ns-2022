@@ -509,14 +509,15 @@
     text-align: left;
   }
   body .hero .innerContainer::before {
-    left: 2em;
+    right: 2em;
+    left: auto;
   }
   .message-from-ceo .column-margins,
   .checker-board-content {
     padding: 4em 2em;
   }
   .heroContentBox {
-    padding: 2em;
+    padding: 2em 4em 2em 2em;
     //max-width: 100%;
   }
   .ghostVertStitchContainer {
@@ -788,7 +789,7 @@
     left: 2em;
   }
   .heroContentBox {
-    padding: 2em;
+    padding: 2em 8em 2em 2em;
     //max-width: 100%;
   }
   .toggle {

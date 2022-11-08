@@ -6285,14 +6285,15 @@ span.at-icon-wrapper {
     text-align: left;
   }
   body .hero .innerContainer::before {
-    left: 2em;
+    right: 2em;
+    left: auto;
   }
   .message-from-ceo .column-margins,
   .checker-board-content {
     padding: 4em 2em;
   }
   .heroContentBox {
-    padding: 2em;
+    padding: 2em 4em 2em 2em;
   }
   .ghostVertStitchContainer {
     margin: 0;
@@ -6570,7 +6571,7 @@ span.at-icon-wrapper {
     left: 2em;
   }
   .heroContentBox {
-    padding: 2em;
+    padding: 2em 8em 2em 2em;
   }
   .toggle {
     display: none;
