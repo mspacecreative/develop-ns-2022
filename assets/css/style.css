@@ -4639,8 +4639,10 @@ footer .row .col:last-of-type {
 }
 
 .tape-top-right-bottom-right::after {
-  bottom: -50px;
+  bottom: -60px;
+  width: 225px;
   top: auto;
+  background-image: url(../img/textures/tape-right-narrow.png);
 }
 
 .topLeftCaption::before,
