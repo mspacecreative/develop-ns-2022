@@ -384,6 +384,32 @@ footer .row .col:last-of-type {
   background-image: url(../img/textures/tape-right-narrow.png);
 }
 
+.tape-top-right-bottom-left::before {
+  position: absolute;
+  top: -50px;
+  right: 0;
+  content: "";
+  background-image: url(../img/textures/tape-right-narrow.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 225px;
+  height: 108px;
+  z-index: 2;
+}
+
+.tape-top-right-bottom-left::after {
+  position: absolute;
+  bottom: -50px;
+  left: 0;
+  content: "";
+  background-image: url(../img/textures/tape-left-narrow.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 100px;
+  height: 108px;
+  z-index: 2;
+}
+
 .topLeftCaption::before,
 .working-waterfronts .wp-block-image.videoOverlay::before,
 .tape-top-left:before {
