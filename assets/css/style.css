@@ -2178,6 +2178,12 @@ body:not(.wp-admin) .navy_bg .button.light {
   color: #012a3c;
 }
 
+body:not(.wp-admin) .button.orange_bg:hover,
+body:not(.wp-admin) .button.blue_bg:hover,
+body:not(.wp-admin) .button.navy_bg:hover {
+  background-color: transparent;
+}
+
 body:not(.wp-admin) .navy_bg .button.light:hover,
 body:not(.wp-admin) .orange_bg .button.light:hover,
 body:not(.wp-admin) .blue_bg .button.light:hover {
