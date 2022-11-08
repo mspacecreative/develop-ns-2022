@@ -6210,8 +6210,9 @@ span.at-icon-wrapper {
     top: -25px;
   }
   .tape-top-right-bottom-left::after {
-    bottom: -25px;
+    bottom: -45px;
     top: auto;
+    height: 85px;
   }
   .topLeftCaption::before,
   .working-waterfronts .wp-block-image.videoOverlay::before,
