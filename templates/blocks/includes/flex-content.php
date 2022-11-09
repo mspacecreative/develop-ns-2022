@@ -132,10 +132,10 @@ while ( have_rows('flexible_content') ): the_row();
 				$terms = get_the_terms($item->ID, 'company'); ?>
 								
 				<div<?php if ($animate): echo ' data-aos="fade-'; if ($animatedirection): echo $animatedirection; endif; echo'"'; endif; ?> class="row article-container">
-					<div class="col col-lg-2 col-md-2 col-sm-2 col-xs-2" style="flex-basis: auto; max-width: 100%;">
+					<div class="col col-lg-2 col-md-2 col-sm-2 col-xs-2" style="flex-basis: 60px; max-width: 100%;">
 						<img src="<?php echo get_template_directory_uri() . '/assets/img/icons/article-icon.svg'; ?>" style="margin-top: 5px;">
 					</div>
-					<div class="col col-lg-10 col-md-10 col-sm-10 col-xs-10">
+					<div class="col col-lg-10 col-md-10 col-sm-10 col-xs-10" style="flex: 1; max-width: 100%;">
 						<h4>
 							<?php echo $title . __(' ...'); ?>
 						</h4>
